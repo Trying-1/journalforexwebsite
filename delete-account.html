@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Delete Account Request – JournalForex</title>
+  <meta name="description" content="Request deletion of your JournalForex account and data." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .doc { padding: 32px 0 64px; }
+    .doc h1 { font-size: 28px; margin: 0 0 8px; }
+    .doc .muted { color: var(--muted); margin-bottom: 20px; }
+    .panel { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 18px; border-radius: 14px; }
+    form { display: grid; gap: 12px; margin-top: 10px; }
+    label { font-weight: 600; }
+    input, textarea { width: 100%; padding: 10px 12px; border-radius: 10px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12); color: var(--text); }
+    textarea { min-height: 120px; resize: vertical; }
+    .help { color: var(--muted); font-size: 14px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <img src="/favicon.svg" alt="JournalForex logo" class="brand-logo" />
+        <span class="brand-name">JournalForex</span>
+      </a>
+      <nav class="nav">
+        <a href="/index.html">Home</a>
+        <a href="/privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="doc">
+    <div class="container">
+      <h1>Delete Account Request</h1>
+      <div class="muted">We'll verify your request and delete associated data as required.</div>
+
+      <div class="panel">
+        <p>You can delete your account and data directly in the app (Settings → Delete Account). If you prefer, submit a request here and we'll process it within 30 days.</p>
+        <form id="deleteForm">
+          <div>
+            <label for="email">Your email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            <div class="help">Use the email associated with your account.</div>
+          </div>
+          <div>
+            <label for="userId">User ID (optional)</label>
+            <input id="userId" name="userId" type="text" placeholder="Paste from app > Settings" />
+          </div>
+          <div>
+            <label for="message">Message (optional)</label>
+            <textarea id="message" name="message" placeholder="Anything we should know?" ></textarea>
+          </div>
+          <div>
+            <button class="btn btn-primary" type="submit">Send deletion request</button>
+            <a class="btn btn-ghost" href="mailto:privacy@journalforex.app?subject=Delete%20Account%20Request">Email manually</a>
+          </div>
+        </form>
+      </div>
+
+      <p class="help">By submitting, you confirm you want your account and related personal data removed. This action is irreversible.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="/favicon.svg" alt="JournalForex" />
+        <span>JournalForex</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/delete-account.html">Delete Account Request</a>
+        <a href="mailto:support@journalforex.app">Support</a>
+      </nav>
+      <div class="legal">© <span id="year"></span> JournalForex. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const form = document.getElementById('deleteForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      const userId = document.getElementById('userId').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('Delete Account Request');
+      const bodyLines = [
+        `Email: ${email}`,
+        userId ? `User ID: ${userId}` : null,
+        message ? `Message: ${message}` : null,
+        '',
+        'I request deletion of my JournalForex account and associated personal data.'
+      ].filter(Boolean);
+      const body = encodeURIComponent(bodyLines.join('\n'));
+      window.location.href = `mailto:privacy@journalforex.app?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
+
+
