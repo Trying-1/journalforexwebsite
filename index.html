@@ -1,155 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>JournalForex – Smart Forex Trading Journal</title>
-  <meta name="description" content="JournalForex is a clean, powerful mobile app to track trades, analyze performance, and turn data into better forex decisions." />
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JournalForex is a clean, powerful mobile app to track trades, analyze performance, and turn data into better forex decisions." />
+    <meta name="keywords" content="forex trading journal, trading analytics, forex tracker, trade journal app" />
+    <title>JournalForex – Smart Forex Trading Journal</title>
+    
+    <!-- SEO -->
+    <link rel="canonical" href="https://journalforex.app/" />
+    <meta name="theme-color" content="#0b1221" />
 
-  <!-- SEO -->
-  <link rel="canonical" href="https://journalforex.app/" />
-  <meta name="theme-color" content="#0b1221" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="JournalForex – Smart Forex Trading Journal" />
+    <meta property="og:description" content="Track trades, tag setups, and review performance with beautiful analytics." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://journalforex.app/" />
+    <meta property="og:image" content="/og-cover.png" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="JournalForex – Smart Forex Trading Journal" />
-  <meta property="og:description" content="Track trades, tag setups, and review performance with beautiful analytics." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://journalforex.app/" />
-  <meta property="og:image" content="/og-cover.png" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="JournalForex – Smart Forex Trading Journal" />
+    <meta name="twitter:description" content="Track trades, tag setups, and review performance with beautiful analytics." />
+    <meta name="twitter:image" content="/og-cover.png" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="JournalForex – Smart Forex Trading Journal" />
-  <meta name="twitter:description" content="Track trades, tag setups, and review performance with beautiful analytics." />
-  <meta name="twitter:image" content="/og-cover.png" />
-
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="/">
-        <img src="/favicon.svg" alt="JournalForex logo" class="brand-logo" />
-        <span class="brand-name">JournalForex</span>
-      </a>
-      <nav class="nav">
-        <a href="#features">Features</a>
-        <a href="#screens">Screens</a>
-        <a href="#faq">FAQ</a>
-        <a class="btn btn-ghost" href="#download">Download</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container grid-two">
-        <div class="hero-copy">
-          <h1>Trade smarter with a focused forex journal</h1>
-          <p class="lead">Capture entries, tag setups, and review your performance with clean, actionable analytics. Build discipline. Find your edge.</p>
-          <div class="cta" id="download">
-            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.yourcompany.journalforex" target="_blank" rel="noopener">Get it on Google Play</a>
-            <a class="btn btn-ghost" href="#features">Explore features</a>
-          </div>
-          <ul class="trust">
-            <li>No ads, your data stays yours</li>
-            <li>Fast, offline-friendly</li>
-            <li>Export to CSV anytime</li>
-          </ul>
-        </div>
-        <div class="hero-art">
-          <div class="phone-frame">
-            <div class="phone-notch"></div>
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop" alt="App screenshot placeholder" class="phone-screen" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="features" class="section">
-      <div class="container">
-        <h2>Everything you need to journal with clarity</h2>
-        <div class="features-grid">
-          <div class="feature">
-            <div class="feature-icon">📊</div>
-            <h3>Performance analytics</h3>
-            <p>See win rate, RR distribution, best sessions, and your most profitable setups.</p>
-          </div>
-          <div class="feature">
-            <div class="feature-icon">🏷️</div>
-            <h3>Tags & setups</h3>
-            <p>Label trades by strategy, session, pair, and more to identify patterns fast.</p>
-          </div>
-          <div class="feature">
-            <div class="feature-icon">📝</div>
-            <h3>Clean journaling flow</h3>
-            <p>Log entries, exits, screenshots, and notes with a frictionless mobile UX.</p>
-          </div>
-          <div class="feature">
-            <div class="feature-icon">☁️</div>
-            <h3>Private & portable</h3>
-            <p>Your data is yours. Export anytime. Optional cloud backup for peace of mind.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="screens" class="section section-alt">
-      <div class="container">
-        <h2>Designed for focus</h2>
-        <p class="section-lead">Minimal, fast, and built for traders who value clarity over clutter.</p>
-        <div class="screens-grid">
-          <img src="https://images.unsplash.com/photo-1516245834210-c4c142787335?q=80&w=1600&auto=format&fit=crop" alt="Screenshot 1" />
-          <img src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?q=80&w=1600&auto=format&fit=crop" alt="Screenshot 2" />
-          <img src="https://images.unsplash.com/photo-1454165205744-3b78555e5572?q=80&w=1600&auto=format&fit=crop" alt="Screenshot 3" />
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="section">
-      <div class="container">
-        <h2>Frequently asked questions</h2>
-        <div class="faq">
-          <details>
-            <summary>How do you handle my data?</summary>
-            <p>We store minimal data and give you full export controls. See our <a href="/privacy.html">Privacy Policy</a>.</p>
-          </details>
-          <details>
-            <summary>Can I delete my account and data?</summary>
-            <p>Yes. Use the in-app option or request from our <a href="/delete-account.html">Delete Account page</a>.</p>
-          </details>
-          <details>
-            <summary>Is there a subscription?</summary>
-            <p>Core features are free. Pro analytics are optional and cancel anytime.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <img src="/favicon.svg" alt="JournalForex" />
-        <span>JournalForex</span>
-      </div>
-      <nav class="footer-nav">
-        <a href="/privacy.html">Privacy Policy</a>
-        <a href="/delete-account.html">Delete Account Request</a>
-        <a href="mailto:support@journalforex.app">Support</a>
-      </nav>
-      <div class="legal">© <span id="year"></span> JournalForex. All rights reserved.</div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Start Single Page Apps for GitHub Pages -->
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script checks to see if a redirect is present in the query string,
+      // converts it back into the correct url and adds it to the
+      // browser's history using window.history.replaceState(...),
+      // which won't cause the browser to attempt to load the new url.
+      // When the single page app is loaded further down in this file,
+      // the correct url will be waiting in the browser's history for
+      // the single page app to route accordingly.
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+    <!-- End Single Page Apps for GitHub Pages -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
 
 

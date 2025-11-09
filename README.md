@@ -1,27 +1,124 @@
-# JournalForex Web Pages
+# JournalForex Landing Page
 
-Static pages for the JournalForex mobile app:
+Modern React-based landing page for the JournalForex mobile app - a smart forex trading journal.
 
-- Landing page: `index.html`
-- Privacy Policy: `privacy.html`
-- Delete Account Request: `delete-account.html`
+## Features
 
-How to run locally:
+- ⚡ Built with React 18 + Vite for blazing fast performance
+- 🎨 Styled with TailwindCSS for modern, responsive design
+- 🧭 React Router for seamless navigation
+- 📱 Fully responsive mobile-first design
+- 🎯 SEO optimized with meta tags
+- 🔗 Multiple pages: Home, Privacy Policy, Account Deletion
+
+## Pages
+
+- **Landing Page** - Main app showcase with features, screenshots, and download CTA
+- **Privacy Policy** - Comprehensive privacy information
+- **Account Deletion** - User account deletion request form
+
+## Development
+
+### Prerequisites
+
+- Node.js 16+ and npm
+
+### Installation
 
 ```bash
-python3 -m http.server 8080 --bind 127.0.0.1
-# then open http://127.0.0.1:8080
+# Install dependencies
+npm install
 ```
 
-Deploy options:
+### Running Locally
 
-- Any static host (GitHub Pages, Netlify, Vercel, Cloudflare Pages, S3).
-- Ensure the site root serves these files. Update Play Console listing URLs accordingly.
+```bash
+# Start development server
+npm run dev
 
-Customization:
+# The site will be available at http://localhost:5173
+```
 
-- Replace placeholder images in `index.html` with your own app screenshots.
-- Update store links and support emails (`support@journalforex.app`, `privacy@journalforex.app`).
-- Adjust copy and colors in `styles.css` to match your brand.
+### Building for Production
+
+```bash
+# Build the project
+npm run build
+
+# Preview the production build
+npm run preview
+```
+
+The built files will be in the `dist/` directory.
+
+## Deployment
+
+This site can be deployed to any static hosting service:
+
+- **GitHub Pages** - Use the built `dist/` folder
+- **Netlify** - Connect your repo and set build command to `npm run build`
+- **Vercel** - Auto-detects Vite and deploys automatically
+- **Cloudflare Pages** - Set build command to `npm run build` and output to `dist`
+
+## Customization
+
+### Update App Store Links
+
+Edit `src/App.jsx` and update the `PLAY_STORE_URL` constant:
+
+```javascript
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=YOUR_APP_ID';
+```
+
+### Update Content
+
+- **Features** - Edit the `features` array in `src/App.jsx`
+- **FAQ** - Edit the `faqs` array in `src/App.jsx`
+- **Privacy Policy** - Edit `src/pages/PrivacyPolicy.jsx`
+- **Account Deletion** - Edit `src/pages/AccountDeletion.jsx`
+
+### Update Branding
+
+- **Colors** - Modify TailwindCSS classes in components or extend `tailwind.config.js`
+- **Logo** - Replace `/favicon.svg` with your logo
+- **Fonts** - Update Google Fonts link in `index.html`
+
+### Update Contact Emails
+
+Replace these emails throughout the codebase:
+- `support@journalforex.app`
+- `privacy@journalforex.app`
+
+## Project Structure
+
+```
+journalforexwebsite/
+├── public/              # Static assets
+│   └── favicon.svg      # App logo
+├── src/
+│   ├── pages/           # Page components
+│   │   ├── PrivacyPolicy.jsx
+│   │   └── AccountDeletion.jsx
+│   ├── App.jsx          # Main landing page component
+│   ├── App.css          # Component-specific styles
+│   ├── main.jsx         # App entry point with routing
+│   └── index.css        # Global styles with Tailwind
+├── index.html           # HTML entry point
+├── package.json         # Dependencies and scripts
+├── vite.config.js       # Vite configuration
+└── tailwind.config.js   # TailwindCSS configuration
+```
+
+## Technologies Used
+
+- **React 18** - UI library
+- **Vite** - Build tool and dev server
+- **TailwindCSS** - Utility-first CSS framework
+- **React Router** - Client-side routing
+- **Lucide React** - Beautiful icon library
+
+## License
+
+All rights reserved.
 
 
