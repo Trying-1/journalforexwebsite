@@ -28,10 +28,12 @@ Use this checklist to set up and customize your JournalForex landing page.
 
 ## 📝 Essential Customization
 
-### Update App Store Links
+### Update Download Links
 - [ ] Open `src/App.jsx`
-- [ ] Find line 11: `const PLAY_STORE_URL`
-- [ ] Replace with your actual Google Play Store URL
+- [ ] Find line 6: `const APK_DOWNLOAD_URL`
+- [ ] Replace with your GitHub Releases APK URL
+  - Format: `https://github.com/YOUR_USERNAME/REPO_NAME/releases/latest/download/journalforex.apk`
+- [ ] (Optional) Update `PLAY_STORE_URL` when app is published to Play Store
 - [ ] Save file
 
 ### Update Contact Emails

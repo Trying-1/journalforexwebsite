@@ -62,13 +62,19 @@ This site can be deployed to any static hosting service:
 
 ## Customization
 
-### Update App Store Links
+### Update Download Links
 
-Edit `src/App.jsx` and update the `PLAY_STORE_URL` constant:
+Edit `src/App.jsx` and update the download URLs:
 
 ```javascript
+// For beta testing - GitHub Releases APK
+const APK_DOWNLOAD_URL = 'https://github.com/YOUR_USERNAME/journalforex-app/releases/latest/download/journalforex.apk';
+
+// For production - Google Play Store (when published)
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=YOUR_APP_ID';
 ```
+
+**Current Setup:** The app uses GitHub Releases for APK distribution during closed beta testing. Update to Play Store URL when published.
 
 ### Update Content
 

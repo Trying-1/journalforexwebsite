@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { BarChart3, Tag, FileText, Cloud, Download, Smartphone, Menu, X, CheckCircle, TrendingUp, PieChart, Calendar } from 'lucide-react';
 import './App.css';
 
-// Google Play Store URL - Update this when published
-const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.yourcompany.journalforex';
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.journalforex.forexjournal';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -72,21 +71,17 @@ function App() {
     {
       question: "Is there a subscription?",
       answer: "Core features are free. Pro analytics are optional and cancel anytime."
-    },
-    {
-      question: "What platforms do you support?",
-      answer: "Currently available on Android. iOS version coming soon."
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen neo-page">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-slate-900/80 backdrop-blur-md z-50 border-b border-slate-700/50">
+      <nav className="fixed top-0 w-full bg-slate-900/60 backdrop-blur-md z-50 border-b border-slate-800/60 neo-soft-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
+              <div className="w-10 h-10 bg-slate-900 neo-pill-soft flex items-center justify-center">
                 <BarChart3 className="w-6 h-6 text-white" />
               </div>
               <span className="text-xl font-bold text-white">JournalForex</span>
@@ -94,15 +89,15 @@ function App() {
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-slate-300 hover:text-white transition">Features</a>
-              <a href="#screens" className="text-slate-300 hover:text-white transition">Screens</a>
-              <a href="#faq" className="text-slate-300 hover:text-white transition">FAQ</a>
-              <a href="#download" className="text-slate-300 hover:text-white transition">Download</a>
+              <a href="#features" className="text-slate-300 hover:text-slate-50 transition">Features</a>
+              <a href="#screens" className="text-slate-300 hover:text-slate-50 transition">Screens</a>
+              <a href="#faq" className="text-slate-300 hover:text-slate-50 transition">FAQ</a>
+              <a href="#download" className="text-slate-300 hover:text-slate-50 transition">Download</a>
               <button 
-                className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full font-medium hover:shadow-lg transition transform hover:scale-105"
+                className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-2 neo-pill font-medium hover:shadow-xl transition"
                 onClick={() => window.open(PLAY_STORE_URL, '_blank')}
               >
-                Get Started
+                Get it on Google Play
               </button>
             </div>
 
@@ -128,7 +123,7 @@ function App() {
                 className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full font-medium"
                 onClick={() => window.open(PLAY_STORE_URL, '_blank')}
               >
-                Get Started
+                Get it on Google Play
               </button>
             </div>
           </div>
@@ -139,8 +134,50 @@ function App() {
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center space-x-2 bg-purple-500/10 border border-purple-500/20 px-4 py-2 rounded-full mb-6">
+            {/* Hero Image/Mockup (mobile-first) */}
+            <div className="relative order-1 lg:order-2">
+              <div className="relative z-10">
+                <div className="rounded-3xl p-[3px] neo-card-soft">
+                  <div className="bg-slate-950 rounded-3xl p-8 neo-soft-inner">
+                    <div className="aspect-[9/19.5] bg-slate-900 rounded-2xl overflow-hidden neo-soft-border">
+                      <div className="h-full flex flex-col">
+                        {/* Phone notch */}
+                        <div className="h-6 bg-slate-950 rounded-b-2xl mx-auto w-1/3"></div>
+                        {/* Mock content */}
+                        <div className="flex-1 p-4 space-y-3">
+                          <div className="bg-slate-900/70 neo-soft-border rounded-lg p-3">
+                            <div className="flex items-center justify-between mb-2">
+                              <span className="text-xs text-green-400 font-medium">EUR/USD</span>
+                              <span className="text-xs text-green-400">+2.5%</span>
+                            </div>
+                            <div className="h-1 bg-green-500/30 rounded-full"></div>
+                          </div>
+                          <div className="bg-slate-900/70 neo-soft-border rounded-lg p-3">
+                            <div className="flex items-center justify-between mb-2">
+                              <span className="text-xs text-red-400 font-medium">GBP/JPY</span>
+                              <span className="text-xs text-red-400">-1.2%</span>
+                            </div>
+                            <div className="h-1 bg-red-500/30 rounded-full"></div>
+                          </div>
+                          <div className="bg-slate-900/80 rounded-lg p-3 space-y-2 neo-soft-inner">
+                            <div className="h-2 bg-slate-700 rounded w-3/4"></div>
+                            <div className="h-2 bg-slate-700 rounded w-1/2"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Floating elements */}
+              <div className="absolute -top-4 -right-4 w-24 h-24 bg-purple-500/60 rounded-full blur-3xl opacity-40 animate-pulse"></div>
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-blue-500/60 rounded-full blur-3xl opacity-35 animate-pulse delay-75"></div>
+            </div>
+
+            {/* Hero Copy & Primary CTA */}
+            <div className="order-2 lg:order-1">
+              <div className="inline-flex items-center space-x-2 bg-slate-900/70 neo-soft-border px-4 py-2 rounded-full mb-6 neo-pill-soft">
                 <BarChart3 className="w-4 h-4 text-purple-400" />
                 <span className="text-sm font-medium text-purple-300">Smart Forex Trading Journal</span>
               </div>
@@ -155,19 +192,13 @@ function App() {
                 Build discipline. Find your edge.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 mb-8" id="download">
+              <div className="flex flex-col sm:flex-row gap-4 mb-10" id="download">
                 <button 
-                  className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full font-medium hover:shadow-xl transition transform hover:scale-105 flex items-center justify-center space-x-2"
+                  className="w-full sm:w-auto bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-4 neo-pill font-medium hover:shadow-2xl transition flex items-center justify-center space-x-2 text-base sm:text-lg"
                   onClick={() => window.open(PLAY_STORE_URL, '_blank')}
                 >
                   <Download className="w-5 h-5" />
                   <span>Get it on Google Play</span>
-                </button>
-                <button 
-                  className="bg-slate-700/50 text-white px-8 py-4 rounded-full font-medium hover:bg-slate-700 transition flex items-center justify-center space-x-2"
-                  onClick={() => document.getElementById('features').scrollIntoView({ behavior: 'smooth' })}
-                >
-                  <span>Explore Features</span>
                 </button>
               </div>
               
@@ -186,53 +217,12 @@ function App() {
                 </div>
               </div>
             </div>
-
-            {/* Hero Image/Mockup */}
-            <div className="relative">
-              <div className="relative z-10">
-                <div className="bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 rounded-3xl p-1 shadow-2xl transform hover:scale-105 transition duration-300">
-                  <div className="bg-slate-900 rounded-3xl p-8">
-                    <div className="aspect-[9/19.5] bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden shadow-inner border border-slate-700">
-                      <div className="h-full flex flex-col">
-                        {/* Phone notch */}
-                        <div className="h-6 bg-slate-950 rounded-b-2xl mx-auto w-1/3"></div>
-                        {/* Mock content */}
-                        <div className="flex-1 p-4 space-y-3">
-                          <div className="bg-gradient-to-r from-green-500/20 to-green-600/20 border border-green-500/30 rounded-lg p-3">
-                            <div className="flex items-center justify-between mb-2">
-                              <span className="text-xs text-green-400 font-medium">EUR/USD</span>
-                              <span className="text-xs text-green-400">+2.5%</span>
-                            </div>
-                            <div className="h-1 bg-green-500/30 rounded-full"></div>
-                          </div>
-                          <div className="bg-gradient-to-r from-red-500/20 to-red-600/20 border border-red-500/30 rounded-lg p-3">
-                            <div className="flex items-center justify-between mb-2">
-                              <span className="text-xs text-red-400 font-medium">GBP/JPY</span>
-                              <span className="text-xs text-red-400">-1.2%</span>
-                            </div>
-                            <div className="h-1 bg-red-500/30 rounded-full"></div>
-                          </div>
-                          <div className="bg-slate-800/50 rounded-lg p-3 space-y-2">
-                            <div className="h-2 bg-slate-700 rounded w-3/4"></div>
-                            <div className="h-2 bg-slate-700 rounded w-1/2"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-purple-500 rounded-full blur-3xl opacity-50 animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-blue-500 rounded-full blur-3xl opacity-50 animate-pulse delay-75"></div>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section id="features" className="py-20 bg-slate-900/50">
+      <section id="features" className="py-20 bg-slate-950/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-white">
@@ -248,9 +238,9 @@ function App() {
             {features.map((feature, index) => (
               <div 
                 key={index}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 p-8 rounded-2xl hover:bg-slate-800/70 hover:border-purple-500/50 transition group cursor-pointer"
+                className="neo-card p-8 rounded-2xl hover:translate-y-[-2px] transition group cursor-pointer border border-slate-900/70"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center text-white mb-4 group-hover:scale-110 transition shadow-lg">
+                <div className="w-12 h-12 bg-slate-950 neo-pill-soft flex items-center justify-center text-white mb-4 group-hover:scale-105 transition">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-white">{feature.title}</h3>
@@ -301,7 +291,7 @@ function App() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-slate-900/50">
+      <section className="py-20 bg-slate-950/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-white">
@@ -317,9 +307,9 @@ function App() {
             {useCases.map((useCase, index) => (
               <div 
                 key={index}
-                className="bg-slate-800/30 border border-slate-700/50 p-6 rounded-2xl hover:bg-slate-800/50 hover:border-purple-500/50 transition group cursor-pointer"
+                className="neo-card-soft p-6 rounded-2xl hover:translate-y-[-2px] transition group cursor-pointer border border-slate-900/70"
               >
-                <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                <div className="w-10 h-10 bg-slate-950 neo-pill-soft flex items-center justify-center mb-4 group-hover:scale-105 transition">
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-bold mb-2 text-white">{useCase.title}</h3>
@@ -342,7 +332,7 @@ function App() {
             {faqs.map((faq, index) => (
               <details 
                 key={index}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:bg-slate-800/70 transition group"
+                className="neo-card-soft border border-slate-900/70 rounded-xl p-6 hover:translate-y-[-2px] transition group"
               >
                 <summary className="cursor-pointer font-semibold text-white text-lg list-none flex items-center justify-between">
                   {faq.question}
@@ -360,9 +350,9 @@ function App() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-slate-900/50">
+      <section className="py-20 bg-slate-950/40">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-gradient-to-br from-purple-600 to-blue-600 rounded-3xl p-12 shadow-2xl">
+          <div className="neo-card rounded-3xl p-12">
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to improve your trading?
             </h2>
@@ -372,14 +362,14 @@ function App() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
-                className="bg-white text-purple-600 px-8 py-4 rounded-full font-medium hover:shadow-xl transition transform hover:scale-105 flex items-center justify-center space-x-2"
+                className="w-full sm:w-auto bg-slate-50 text-purple-700 px-8 py-4 neo-pill-soft font-medium hover:shadow-xl transition flex items-center justify-center space-x-2 text-base sm:text-lg"
                 onClick={() => window.open(PLAY_STORE_URL, '_blank')}
               >
                 <Download className="w-5 h-5" />
-                <span>Download Now</span>
+                <span>Get it on Google Play</span>
               </button>
               <button 
-                className="bg-slate-900 text-white px-8 py-4 rounded-full font-medium hover:shadow-xl transition transform hover:scale-105 flex items-center justify-center space-x-2"
+                className="w-full sm:w-auto bg-slate-900 text-white px-8 py-4 neo-pill-soft font-medium hover:shadow-lg transition flex items-center justify-center space-x-2 text-base sm:text-lg"
                 onClick={() => document.getElementById('features').scrollIntoView({ behavior: 'smooth' })}
               >
                 <span>Learn More</span>
@@ -405,7 +395,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-950 text-white py-12 border-t border-slate-800">
+      <footer className="bg-slate-950 text-white py-12 border-t border-slate-900/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
@@ -447,11 +437,10 @@ function App() {
                     onClick={() => window.open(PLAY_STORE_URL, '_blank')}
                     className="hover:text-white transition flex items-center space-x-2"
                   >
-                    <Smartphone className="w-4 h-4" />
-                    <span>Google Play</span>
+                    <Download className="w-4 h-4" />
+                    <span>Get it on Google Play</span>
                   </button>
                 </li>
-                <li className="text-slate-500">iOS (Coming Soon)</li>
               </ul>
             </div>
           </div>
@@ -463,6 +452,17 @@ function App() {
           </div>
         </div>
       </footer>
+
+      {/* Sticky floating CTA button */}
+      <div className="fixed inset-x-4 bottom-4 sm:bottom-6 sm:inset-x-auto sm:right-6 z-40">
+        <button
+          className="w-full sm:w-auto bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 sm:px-7 sm:py-3.5 rounded-full neo-pill font-medium shadow-lg hover:shadow-2xl text-sm sm:text-base flex items-center justify-center space-x-2"
+          onClick={() => window.open(PLAY_STORE_URL, '_blank')}
+        >
+          <Download className="w-5 h-5" />
+          <span>Get it on Google Play</span>
+        </button>
+      </div>
     </div>
   );
 }
