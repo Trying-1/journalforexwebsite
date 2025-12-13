@@ -110,10 +110,10 @@ function PrivacyPolicy() {
             <p className="text-slate-300 leading-relaxed">
               If you have questions about this policy or your data, contact us at{' '}
               <a
-                href="mailto:privacy@journalforex.app"
+                href="mailto:arisesoloapp@gmail.com"
                 className="text-purple-400 hover:text-purple-300 underline"
               >
-                privacy@journalforex.app
+                arisesoloapp@gmail.com
               </a>
               .
             </p>
@@ -142,7 +142,7 @@ function PrivacyPolicy() {
                 Delete Account
               </button>
               <a
-                href="mailto:support@journalforex.app"
+                href="mailto:arisesoloapp@gmail.com"
                 className="text-slate-400 hover:text-white transition"
               >
                 Support

@@ -23,7 +23,7 @@ function AccountDeletion() {
     ].filter(Boolean);
     const body = encodeURIComponent(bodyLines.join('\n'));
     
-    window.location.href = `mailto:privacy@journalforex.app?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:arisesoloapp@gmail.com?subject=${subject}&body=${body}`;
   };
 
   const handleChange = (e) => {
@@ -140,7 +140,7 @@ function AccountDeletion() {
                 <span>Send deletion request</span>
               </button>
               <a
-                href="mailto:privacy@journalforex.app?subject=Delete%20Account%20Request"
+                href="mailto:arisesoloapp@gmail.com?subject=Delete%20Account%20Request"
                 className="flex-1 bg-slate-700/50 text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-700 transition flex items-center justify-center space-x-2"
               >
                 <Mail className="w-5 h-5" />
@@ -180,7 +180,7 @@ function AccountDeletion() {
                 Privacy Policy
               </button>
               <a
-                href="mailto:support@journalforex.app"
+                href="mailto:arisesoloapp@gmail.com"
                 className="text-slate-400 hover:text-white transition"
               >
                 Support

@@ -340,8 +340,8 @@ function App() {
                 </summary>
                 <p className="text-slate-400 mt-4 leading-relaxed">
                   {faq.answer}
-                  {index === 0 && <a href="#/privacy-policy" className="text-purple-400 hover:text-purple-300 ml-1">Privacy Policy</a>}
-                  {index === 1 && <a href="#/account-deletion" className="text-purple-400 hover:text-purple-300 ml-1">Delete Account page</a>}
+                  {index === 0 && <a href="mailto:arisesoloapp@gmail.com" className="text-purple-400 hover:text-purple-300 ml-1">Privacy Policy</a>}
+                  {index === 1 && <a href="mailto:arisesoloapp@gmail.com" className="text-purple-400 hover:text-purple-300 ml-1">Delete Account page</a>}
                 </p>
               </details>
             ))}
@@ -423,9 +423,9 @@ function App() {
             <div>
               <h4 className="font-bold mb-4">Support</h4>
               <ul className="space-y-2 text-slate-400 text-sm">
-                <li><a href="mailto:support@journalforex.app" className="hover:text-white transition">Contact</a></li>
-                <li><a href="#/privacy-policy" className="hover:text-white transition">Privacy Policy</a></li>
-                <li><a href="#/account-deletion" className="hover:text-white transition">Delete Account</a></li>
+                <li><a href="mailto:arisesoloapp@gmail.com" className="hover:text-white transition">Contact</a></li>
+                <li><a href="mailto:arisesoloapp@gmail.com" className="hover:text-white transition">Privacy Policy</a></li>
+                <li><a href="mailto:arisesoloapp@gmail.com" className="hover:text-white transition">Delete Account</a></li>
               </ul>
             </div>
             
