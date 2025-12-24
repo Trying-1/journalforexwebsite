@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Account Deletion – TradeLab</title>
+  <meta name="description" content="Information about account deletion and data removal for the TradeLab app." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .doc { padding: 32px 0 64px; }
+    .doc h1 { font-size: 28px; margin: 0 0 8px; }
+    .doc .muted { color: var(--muted); margin-bottom: 20px; }
+    .panel { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 18px; border-radius: 14px; }
+    .panel + .panel { margin-top: 14px; }
+    .help { color: var(--muted); font-size: 14px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <img src="/favicon.svg" alt="TradeLab logo" class="brand-logo" />
+        <span class="brand-name">TradeLab</span>
+      </a>
+      <nav class="nav">
+        <a href="/index.html">Home</a>
+        <a href="/tradelab-privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="doc">
+    <div class="container">
+      <h1>Account Deletion & Data Removal</h1>
+      <div class="muted">How to remove your data from TradeLab.</div>
+
+      <div class="panel">
+        <h2>No user accounts</h2>
+        <p>TradeLab does not use user accounts or logins. We do not maintain a central profile or database of your personal information.</p>
+        <p>Because of this, there is no online account to delete. All data used by TradeLab is either:</p>
+        <ul>
+          <li>Generated temporarily in memory for simulations, or</li>
+          <li>Stored locally on your device as app data (for example, preferences or recent configurations).</li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <h2>How to delete your data</h2>
+        <p>To remove TradeLab and any associated local data from your device:</p>
+        <ol>
+          <li>Open your device's app settings or app management screen.</li>
+          <li>Locate <strong>TradeLab</strong> in the list of installed apps.</li>
+          <li>Choose <strong>Uninstall</strong> (and, if offered, confirm that you also want to remove app data).</li>
+        </ol>
+        <p>On most devices, uninstalling the app removes all local data stored by TradeLab. Exact behavior may depend on your operating system and its backup/settings features.</p>
+      </div>
+
+      <div class="panel">
+        <h2>Questions or issues</h2>
+        <p>If you have questions about how TradeLab handles data, or if your app store requires you to submit an account or data deletion request, you can contact us directly.</p>
+        <p class="help">Contact email: <a href="mailto:privacy@journalforex.app?subject=TradeLab%20Data%20Deletion">privacy@journalforex.app</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="/favicon.svg" alt="TradeLab" />
+        <span>TradeLab</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="/tradelab-privacy.html">Privacy Policy</a>
+        <a href="/tradelab-delete-account.html">Account Deletion</a>
+        <a href="mailto:support@journalforex.app">Support</a>
+      </nav>
+      <div class="legal">© <span id="year"></span> TradeLab. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

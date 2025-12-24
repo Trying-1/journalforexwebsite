@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy – TradeLab</title>
+  <meta name="description" content="Privacy Policy for TradeLab Monte Carlo trading simulator." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    .doc { padding: 32px 0 64px; }
+    .doc h1 { font-size: 28px; margin: 0 0 8px; }
+    .doc .muted { color: var(--muted); margin-bottom: 20px; }
+    .doc section { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 18px; border-radius: 14px; }
+    .doc section + section { margin-top: 14px; }
+    .doc h2 { font-size: 18px; margin: 0 0 8px; }
+    .doc p { margin: 10px 0; color: var(--muted); }
+    .doc ul { margin: 8px 0 8px 18px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <img src="/favicon.svg" alt="TradeLab logo" class="brand-logo" />
+        <span class="brand-name">TradeLab</span>
+      </a>
+      <nav class="nav">
+        <a href="/index.html">Home</a>
+        <a href="/tradelab-delete-account.html">Account Deletion</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="doc">
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <div class="muted">Last updated: <span id="date"></span></div>
+
+      <section>
+        <h2>Overview</h2>
+        <p>TradeLab is a simple Monte Carlo trading simulator designed to help you explore risk–reward, win rate, and other performance scenarios. The app is focused on simulation only and does not provide brokerage services or financial advice.</p>
+      </section>
+
+      <section>
+        <h2>Data we collect</h2>
+        <p>TradeLab is designed to work with minimal personal data.</p>
+        <ul>
+          <li><strong>Personal information:</strong> The app does not require you to create an account and does not ask for your name, email address, or other personally identifying information.</li>
+          <li><strong>Simulation inputs:</strong> Parameters you enter for simulations (such as risk per trade, win rate, reward-to-risk, number of simulations) are processed locally on your device and are not sent to our servers.</li>
+          <li><strong>Crash and usage data (optional):</strong> Depending on your device and platform settings, anonymized crash or performance data may be collected by the app store / operating system to help improve stability.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>How we use information</h2>
+        <ul>
+          <li>To run Monte Carlo simulations based on the parameters you provide.</li>
+          <li>To improve the stability and performance of the app (via anonymized crash or analytics data, where enabled by the platform).</li>
+        </ul>
+        <p>We do <strong>not</strong> sell your data and do not use it for advertising or user profiling.</p>
+      </section>
+
+      <section>
+        <h2>Data storage and retention</h2>
+        <p>Simulation inputs and results are stored locally on your device where applicable (for example, recent configurations or preferences). We do not maintain a central database of your simulations.</p>
+        <p>If you uninstall TradeLab, any locally stored app data on your device is typically removed as part of the uninstall process, subject to how your operating system manages app data.</p>
+      </section>
+
+      <section>
+        <h2>Accounts and deletion</h2>
+        <p>TradeLab does not use user accounts or server-side profiles. Because we do not store personal data on our servers, there is no online account to delete.</p>
+        <p>If you wish to remove all TradeLab data from your device, you can do so by uninstalling the app. For additional questions, you can also contact us using the details below.</p>
+        <p>For stores that require an "Account Deletion" URL, please refer to our dedicated page: <a href="/tradelab-delete-account.html">TradeLab Account Deletion</a>.</p>
+      </section>
+
+      <section>
+        <h2>Third-party services</h2>
+        <p>TradeLab may rely on services provided by the operating system or app store (for example, analytics, crash reporting, or billing). Any data collected by those platforms is handled according to their own privacy policies.</p>
+      </section>
+
+      <section>
+        <h2>Children's privacy</h2>
+        <p>TradeLab is intended for adults interested in trading and quantitative analysis. It is not directed at children under 13. We do not knowingly collect personal information from children under 13.</p>
+      </section>
+
+      <section>
+        <h2>Financial disclaimer</h2>
+        <p>TradeLab is a simulation and educational tool only. It does not provide investment, trading, or financial advice, and simulated results do not guarantee or predict actual trading performance. Always do your own research and consider consulting a qualified financial professional before making trading decisions.</p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>If you have questions about this policy or your data in TradeLab, contact us at <a href="mailto:privacy@journalforex.app">privacy@journalforex.app</a>.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="/favicon.svg" alt="TradeLab" />
+        <span>TradeLab</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="/tradelab-privacy.html">Privacy Policy</a>
+        <a href="/tradelab-delete-account.html">Account Deletion</a>
+        <a href="mailto:support@journalforex.app">Support</a>
+      </nav>
+      <div class="legal">© <span id="year"></span> TradeLab. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('date').textContent = new Date().toISOString().slice(0,10);
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
