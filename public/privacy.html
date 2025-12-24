@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy – JournalForex</title>
+  <meta name="description" content="Privacy Policy for JournalForex mobile application." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/tradelab-styles.css" />
+  <style>
+    .doc { padding: 32px 0 64px; }
+    .doc h1 { font-size: 28px; margin: 0 0 8px; }
+    .doc .muted { color: var(--muted); margin-bottom: 20px; }
+    .doc section { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 18px; border-radius: 14px; }
+    .doc section + section { margin-top: 14px; }
+    .doc h2 { font-size: 18px; margin: 0 0 8px; }
+    .doc p { margin: 10px 0; color: var(--muted); }
+    .doc ul { margin: 8px 0 8px 18px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <img src="/favicon.svg" alt="JournalForex logo" class="brand-logo" />
+        <span class="brand-name">JournalForex</span>
+      </a>
+      <nav class="nav">
+        <a href="/index.html">Home</a>
+        <a href="/delete-account.html">Delete Account</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="doc">
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <div class="muted">Last updated: <span id="date"></span></div>
+
+      <section>
+        <h2>Overview</h2>
+        <p>JournalForex is a mobile application that helps you record and analyze your forex trades. We respect your privacy and collect only what is necessary to provide and improve the service.</p>
+      </section>
+
+      <section>
+        <h2>Information we collect</h2>
+        <ul>
+          <li>Account data such as email and display name (if you sign in).</li>
+          <li>Trade journal entries you add in the app (positions, notes, tags, media).</li>
+          <li>Optional crash and usage analytics to improve stability and features.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>How we use information</h2>
+        <ul>
+          <li>Provide core journaling functionality and sync (if enabled).</li>
+          <li>Analyze aggregated usage to improve app performance and design.</li>
+          <li>Communicate important updates and respond to support requests.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Data retention and deletion</h2>
+        <p>You can export your data at any time from the app. You can delete your account and associated data from within the app, or by submitting a request via our <a href="/delete-account.html">Delete Account page</a>. We will process verified requests within 30 days unless a shorter period is required by law.</p>
+      </section>
+
+      <section>
+        <h2>Third-party services</h2>
+        <p>We may use third-party services for authentication, analytics, or cloud storage. Where used, data is handled per those providers' terms in compliance with applicable laws.</p>
+      </section>
+
+      <section>
+        <h2>Children's privacy</h2>
+        <p>JournalForex is not intended for children under 13. We do not knowingly collect personal information from children under 13.</p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>If you have questions about this policy or your data, contact us at <a href="mailto:privacy@journalforex.app">privacy@journalforex.app</a>.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="/favicon.svg" alt="JournalForex" />
+        <span>JournalForex</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/delete-account.html">Delete Account Request</a>
+        <a href="mailto:support@journalforex.app">Support</a>
+      </nav>
+      <div class="legal">© <span id="year"></span> JournalForex. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('date').textContent = new Date().toISOString().slice(0,10);
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
